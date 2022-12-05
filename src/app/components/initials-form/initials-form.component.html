@@ -1,0 +1,33 @@
+<div class="form">
+  <div class="form-input">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <input matInput (input)="nameChange($event)" placeholder="Name" maxlength="20">
+        </mat-form-field>
+  </div>
+  
+  <div class="form-input">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <input matInput (input)="lastNameChange($event)" placeholder="Last Name" maxlength="30">
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="initials">
+  <app-avatar></app-avatar>
+
+  <div class="form-group">
+    <div class="colorPicker">
+      <p>Color:</p>
+      <input matInput type="color" class="color-input" id="color" (input)="colorChange($event)" value="#ffffff">
+    </div>
+
+    <div class="fontColorPicker">
+      <p>Font color:</p>
+      <input matInput type="color" class="color-input" id="font-color" (input)="fontColorChange($event)" value="#000000">
+      <span matTooltip="the color may be difficult to read for the selected background color" *ngIf="this.warning" class="material-icons red-color">warning </span>
+    </div>
+    
+    <mat-checkbox class="shape-check" (change)="squareChange($event.checked)">Square</mat-checkbox>
+  </div>
+
+

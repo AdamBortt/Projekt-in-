@@ -1,0 +1,85 @@
+.initials {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0;
+}
+.form {
+    width: 700px;
+}
+.form-input {
+    display: flex;
+}
+.colorPicker {
+    display: flex;
+    flex-direction: row;
+    margin-left: 31px;
+}
+.sizePicker {
+    display: flex;
+    flex-direction: row;
+    margin-left: 31px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+    width: 190px;
+}
+.iconView {
+    margin-left: 100px;
+}
+.iconPreview {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 2px;
+    height: 40px;
+}
+.mat-menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 412px;
+}
+.selectIcon {
+    display: flex;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    font-family: arial,sans-serif;
+    background-color:rgb(63, 81, 181);
+}
+.matMenu-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 412px;
+}
+.icon {
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 0px;
+    box-shadow: 0 0 0 1px black;
+}
+.icon:hover {
+    background-color:rgb(93, 165, 227);
+    transition-duration: 0.5s;
+}
+.color-input {
+    width: 80px;
+}
+.size {
+    height: 15px;
+    margin-right: 5px;
+    margin-top: 13px;
+}
+p { 
+    font-size: 15px;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+.shape-check {
+    margin-left: 30px;
+}
+.mat-slider {
+    padding: 0px;
+}

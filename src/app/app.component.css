@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 10px;
+    margin-top: 50px;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    padding: 0.5em 1em 0.5em !important;
+    width: 300px;
+}
+

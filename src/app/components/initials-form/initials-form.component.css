@@ -1,0 +1,40 @@
+.initials {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0;
+}
+.form {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+}
+.colorPicker {
+    display: flex;
+    flex-direction: row;
+    margin-left: 31px;
+}
+.fontColorPicker {
+    display: flex;
+    flex-direction: row;
+    float: left;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+    width: 190px;
+}
+.color-input {
+    width: 80px;
+}
+p { 
+    font-size: 15px;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+.red-color {
+    color:red;
+    padding-left: 5px;
+    font-size: 28px;
+}

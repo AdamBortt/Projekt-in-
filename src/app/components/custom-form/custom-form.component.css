@@ -1,0 +1,15 @@
+.initials {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+    width: 190px;
+}
+.file-input {
+    display: none;
+  }
