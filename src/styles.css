@@ -1,15 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
+html, body {height: 100%;}
+body { 
+    background-image: linear-gradient(to bottom right, rgb(61, 42, 191), rgb(66, 249, 105));
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .mat-slider-thumb {
 	background-color: rgb(63, 81, 181) !important;
 }
 
 .mat-slider-thumb-label {
     background-color: rgb(63, 81, 181) !important;
-
 }
 
 .mat-slider-track-fill {
