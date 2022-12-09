@@ -3,10 +3,19 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
-    border-radius: 10%;
-    padding: 175px;
+    border-radius: 5% 5% 10% 10%;
+    padding-bottom: 175px;
     width: max-content;
     box-shadow: 0 16px 40px  rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.19)
+}
+.menu {
+    padding-right: 175px;
+    padding-left: 175px;
+}
+app-menu {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 }
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
     padding: 0.5em 1em 0.5em !important;
