@@ -11,7 +11,7 @@ const routes: Routes = [
     component: AvatarsFormComponent
   },
   {
-    path: 'initials',
+    path: 'template',
     component: InitialsFormComponent
   },
   {
@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   {
     path:'**',
-    redirectTo: 'initials'
+    redirectTo: 'template'
   }
 ];
 
