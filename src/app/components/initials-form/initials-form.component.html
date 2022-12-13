@@ -13,6 +13,11 @@
 </div>
 
 <div class="initials">
+  <div class="templatePicker">
+    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btncheck2">Character select</label>
+  </div>
+
   <app-avatar></app-avatar>
 
   <div class="form-group">
@@ -20,13 +25,11 @@
       <p>Color:</p>
       <input matInput type="color" class="color-input" id="color" (input)="colorChange($event)" value="#ffffff">
     </div>
-
     <div class="fontColorPicker">
+      <span matTooltip="the color may be difficult to read for the selected background color" *ngIf="this.warning" class="material-icons red-color">warning </span>
       <p>Font color:</p>
       <input matInput type="color" class="color-input" id="font-color" (input)="fontColorChange($event)" value="#000000">
-      <span matTooltip="the color may be difficult to read for the selected background color" *ngIf="this.warning" class="material-icons red-color">warning </span>
     </div>
-    
     <mat-checkbox class="shape-check" (change)="squareChange($event.checked)">Square</mat-checkbox>
   </div>
 
