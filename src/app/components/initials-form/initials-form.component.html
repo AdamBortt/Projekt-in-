@@ -14,8 +14,10 @@
 
 <div class="initials">
   <div class="templatePicker">
-    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" [(ngModel)]="showCharacterSelect">
     <label class="btn btn-outline-primary" for="btncheck2">Character select</label>
+    <app-character-select *ngIf="showCharacterSelect == true"></app-character-select>
+
   </div>
 
   <app-avatar></app-avatar>

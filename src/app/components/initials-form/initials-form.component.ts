@@ -16,6 +16,7 @@ export class InitialsFormComponent implements OnInit{
   backLightness: number = 1;
   fontLightness: number = 0;
   warning: boolean = false;
+  showCharacterSelect: boolean = false;
   
   ngOnInit(): void {
     this.checkValue();
@@ -85,5 +86,4 @@ export class InitialsFormComponent implements OnInit{
       document.getElementById('avatar').style.borderRadius = "100px";
     }
   }
-
 }

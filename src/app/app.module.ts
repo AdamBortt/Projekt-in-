@@ -26,6 +26,7 @@ import { service } from './services/service';
 import { MenuComponent } from './components/menu/menu.component';
 import { AvatarsFormComponent } from './components/avatars-form/avatars-form.component';
 import { CustomFormComponent } from './components/custom-form/custom-form.component';
+import { CharacterSelectComponent } from './components/initials-form/character-select/character-select.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CustomFormComponent } from './components/custom-form/custom-form.compon
     MenuComponent,
     AvatarsFormComponent,
     CustomFormComponent,
+    CharacterSelectComponent,
   ],
   imports: [
     BrowserModule,
