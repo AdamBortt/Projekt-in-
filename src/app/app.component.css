@@ -5,12 +5,13 @@
     background-color: rgb(255, 255, 255);
     border-radius: 5% 5% 10% 10%;
     padding-bottom: 175px;
-    width: max-content;
+    width: 100%;
     box-shadow: 0 16px 40px  rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.19)
 }
 .menu {
-    padding-right: 175px;
-    padding-left: 175px;
+    /* padding-right: 175px;
+    padding-left: 175px; */
+    width: 100%;
 }
 app-menu {
     display: flex;
