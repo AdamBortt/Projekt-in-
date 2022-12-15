@@ -1,19 +1,22 @@
 .initials {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 2000px;
+    min-width: 1100px;
     margin: 0;
 }
 .templatePicker {
-    width: 33.3%;
+    width: 40%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .form {
     display: flex;
-    justify-content: space-between;
-    width: 700px;
+    justify-content: space-around;
+    width: 100%;
 }
 .colorPicker {
     display: flex;
@@ -28,7 +31,7 @@
 .form-group {
     display: flex;
     flex-direction: column;
-    width: 33.3%;
+    width: 20%;
 }
 .color-input {
     width: 80px;

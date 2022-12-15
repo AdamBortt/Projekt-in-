@@ -83,7 +83,7 @@ export class InitialsFormComponent implements OnInit{
       document.getElementById('avatar').style.borderRadius = "0px"; 
     }
     else {
-      document.getElementById('avatar').style.borderRadius = "100px";
+      document.getElementById('avatar').style.borderRadius = "100%";
     }
   }
 }
