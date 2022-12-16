@@ -26,7 +26,7 @@ export class AvatarsFormComponent implements OnInit {
   ngOnInit(): void {
     this.service.firstLastNameLetter = "";
     this.service.firstNameLetter = "";
-    this.service.buttonEnabled = true;
+    this.service.downloadButtonEnabled = true;
   }
   selectIcon(icon: string) {
     this.service.selectedIcon = icon;
@@ -35,9 +35,9 @@ export class AvatarsFormComponent implements OnInit {
 
   checkValue() {
     if (this.service.selectedIcon == "")
-    this.service.buttonEnabled = true;
+    this.service.downloadButtonEnabled = true;
     else
-    this.service.buttonEnabled = false;
+    this.service.downloadButtonEnabled = false;
   }
   getSliderTickInterval(slider: MatSliderChange) {
     this.service.size = slider.value;

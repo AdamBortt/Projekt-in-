@@ -1,21 +1,20 @@
-<div class="container">
+<div class="container" >
         <div class="leftBtns">
-                <button type="button" class="btn btn-success">
+                <button type="button" class="btn btn-success" [disabled]="service.selectorButtonEnabled">
                         <i class="bi bi-caret-left"></i>
-
                 </button>
-                <button type="button" class="btn btn-success">
+                <button type="button" class="btn btn-success" [disabled]="service.selectorButtonEnabled">
                         <i class="bi bi-caret-left"></i>
                 </button>
         </div>
-        <div class="avatarPreview">
+        <div [ngClass]="(service.selectorButtonEnabled == true) ? 'avatarPreviewDisabled' : 'avatarPreview' ">
     
         </div>
         <div class="rightBtns">
-                <button type="button" class="btn btn-success">
+                <button type="button" class="btn btn-success" [disabled]="service.selectorButtonEnabled">
                         <i class="bi bi-caret-right"></i>
                 </button>
-                <button type="button" class="btn btn-success">
+                <button type="button" class="btn btn-success" [disabled]="service.selectorButtonEnabled">
                         <i class="bi bi-caret-right"></i>
                 </button>
         </div>

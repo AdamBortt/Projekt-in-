@@ -1,5 +1,6 @@
 export class service {
-  buttonEnabled: boolean = true;
+  downloadButtonEnabled: boolean = true;
+  selectorButtonEnabled: boolean = true;
   
   firstNameLetter: string = "";
   firstLastNameLetter: string = "";

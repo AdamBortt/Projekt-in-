@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { service } from 'src/app/services/service';
 
 @Component({
   selector: 'app-character-select',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterSelectComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: service) { }
 
   ngOnInit(): void {
   }

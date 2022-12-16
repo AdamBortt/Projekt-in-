@@ -5,6 +5,10 @@
     justify-content: space-around;
     margin: 5px;
 }
+.avatarPreviewDisabled {
+    width: 70%;
+    border: 2px solid rgb(194, 194, 194);
+}
 .avatarPreview {
     width: 70%;
     border: 2px solid green;

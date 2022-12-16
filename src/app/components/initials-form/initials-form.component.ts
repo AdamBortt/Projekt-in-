@@ -37,9 +37,9 @@ export class InitialsFormComponent implements OnInit{
 
   checkValue() {
     if (this.service.firstNameLetter == "" && this.service.firstLastNameLetter == "")
-    this.service.buttonEnabled = true;
+    this.service.downloadButtonEnabled = true;
     else
-    this.service.buttonEnabled = false;
+    this.service.downloadButtonEnabled = false;
   }
 
   colorChange(event: any) {
