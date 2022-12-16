@@ -1,31 +1,29 @@
 <div class="form">
   <div class="form-input">
-        <mat-form-field class="example-full-width" appearance="fill">
-          <input matInput (input)="nameChange($event)" placeholder="Name" maxlength="20">
-        </mat-form-field>
   </div>
   
   <div class="form-input">
-    <mat-form-field class="example-full-width" appearance="fill">
-      <input matInput (input)="lastNameChange($event)" placeholder="Last Name" maxlength="30">
-    </mat-form-field>
+    
+
   </div>
 </div>
 
 <div class="initials">
   <div class="templatePicker">
-    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" [(ngModel)]="showCharacterSelect">
+    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" [(ngModel)]="this.service.selectorButtonEnabled">
     <label class="btn btn-outline-primary" for="btncheck2">Character select</label>
-    <app-character-select *ngIf="showCharacterSelect == true"></app-character-select>
+    <app-character-select></app-character-select>
 
   </div>
 
   <app-avatar></app-avatar>
 
   <div class="form-group">
+    <input type="text" class="form-control" placeholder="Name" maxlength="20" (input)="nameChange($event)" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" placeholder="Surname" maxlength="20" (input)="lastNameChange($event)" aria-label="Username" aria-describedby="basic-addon1">
     <div class="colorPicker">
       <p>Color:</p>
-      <input matInput type="color" class="color-input" id="color" (input)="colorChange($event)" value="#ffffff">
+        <input matInput type="color" class="color-input" id="font-color" (input)="colorChange($event)" value="#ffffff">
     </div>
     <div class="fontColorPicker">
       <span matTooltip="the color may be difficult to read for the selected background color" *ngIf="this.warning" class="material-icons red-color">warning </span>
@@ -33,6 +31,10 @@
       <input matInput type="color" class="color-input" id="font-color" (input)="fontColorChange($event)" value="#000000">
     </div>
     <mat-checkbox class="shape-check" (change)="squareChange($event.checked)">Square</mat-checkbox>
+
+    <mat-form-field hidden="true">
+      <input matInput type="text">
+    </mat-form-field>
   </div>
 
 
