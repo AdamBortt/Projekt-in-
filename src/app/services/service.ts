@@ -6,4 +6,12 @@ export class service {
   firstLastNameLetter: string = "";
   selectedIcon: string = "";
   size: number = 100;
+
+  imageUrl: string
+
+  clearPreview() {
+    this.imageUrl=""
+    this.firstNameLetter=""
+    this.firstLastNameLetter=""
+  }
 }
