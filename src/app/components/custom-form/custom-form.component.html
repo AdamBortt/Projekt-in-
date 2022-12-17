@@ -1,10 +1,9 @@
 <div class="initials">
-    <app-avatar></app-avatar>
-    <div class="form-group">
-        <button class="btn-primary">
-            <input #Image type="file" (change)="handleFileInput($event)"/>
-        </button>
-        <img width="100%" *ngIf="imageUrl" [src]="imageUrl" class="image">
 
+    <app-avatar></app-avatar>
+
+    <div class="form-group">
+        <input type="file" (change)="onFileChange($event)"/>
+        <img *ngIf="this.service.imageUrl" [src]="this.service.imageUrl" class="image">
     </div>
 </div>

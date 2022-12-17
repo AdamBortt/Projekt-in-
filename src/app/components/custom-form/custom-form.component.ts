@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { service } from '../../services/service';
 
@@ -9,20 +8,15 @@ import { service } from '../../services/service';
 })
 export class CustomFormComponent {
 
-  name = 'Angular';
-  fileToUpload: any;
-  imageUrl: any;
-  handleFileInput(fileEvent: any) {
-    var file = fileEvent.target.files;
+  constructor(public service: service) {  }
 
-    this.fileToUpload = file.item(0);
-
-    //Show image preview
-    let reader = new FileReader();
-    reader.onload = (event: any) => {
-      this.imageUrl = event.target.result;
-    }
-    reader.readAsDataURL(this.fileToUpload);
+  onFileChange(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (e: any) => {
+      this.service.imageUrl = e.target.result;
+    };
+    reader.readAsDataURL(file);
   }
 
 }
