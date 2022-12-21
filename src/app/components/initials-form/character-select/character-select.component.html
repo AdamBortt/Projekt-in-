@@ -8,7 +8,10 @@
                 </button>
         </div>
         <div [ngClass]="(service.selectorButtonEnabled == true) ? 'avatarPreviewDisabled' : 'avatarPreview' ">
-    
+                <div class="character">
+                        <img src="../../../../assets/templates/Head.png" style="position: absolute;">
+                        <img src="../../../../assets/templates/Hairs/Hair1.png" style="position: absolute;">
+                </div>
         </div>
         <div class="rightBtns">
                 <button type="button" class="btn btn-success" [disabled]="service.selectorButtonEnabled">

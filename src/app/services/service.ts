@@ -7,7 +7,7 @@ export class service {
   selectedIcon: string = "";
   size: number = 100;
 
-  imageUrl: string
+  imageUrl: string;
 
   clearPreview() {
     this.imageUrl=""

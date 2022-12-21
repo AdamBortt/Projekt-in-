@@ -5,6 +5,12 @@
     justify-content: space-around;
     margin: 5px;
 }
+.character {
+    position: relative;
+    display: flex; 
+    justify-content: center; 
+    top: 30px;
+}
 .avatarPreviewDisabled {
     width: 70%;
     border: 2px solid rgb(194, 194, 194);

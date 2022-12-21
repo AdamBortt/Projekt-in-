@@ -1,5 +1,5 @@
 <div #screen class="avatar" id="avatar" >
-  <img *ngIf="this.service.imageUrl" src="{{this.service.imageUrl}}">
+  <img *ngIf="this.service.imageUrl" width="100px" height="140px" src="{{this.service.imageUrl}}">
   <h1 *ngIf="this.service.firstNameLetter || this.service.firstLastNameLetter" id="initials">{{ this.service.firstNameLetter }}{{ this.service.firstLastNameLetter }}</h1>
 </div>
 
