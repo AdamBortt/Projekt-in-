@@ -9,7 +9,10 @@
     position: relative;
     display: flex; 
     justify-content: center; 
-    top: 30px;
+    top: 20px;
+}
+.imageDisabled {
+    visibility: hidden;
 }
 .avatarPreviewDisabled {
     width: 70%;
@@ -32,6 +35,5 @@
     max-width: 360px;
     min-width: 360px;
     margin-top: 10px;
-    height: 250px;
-
+    height: 200px;
 }
