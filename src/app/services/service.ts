@@ -9,6 +9,9 @@ export class service {
 
   imageUrl: string;
 
+  currentBodyIndex: number = 0;
+  currentHairIndex: number = 0;
+
   clearPreview() {
     this.imageUrl=""
     this.firstNameLetter=""

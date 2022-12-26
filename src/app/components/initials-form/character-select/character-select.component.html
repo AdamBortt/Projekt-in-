@@ -1,24 +1,24 @@
 <div class="container" >
         <div class="leftBtns">
-                <button type="button" class="btn btn-success" [disabled]="service.selectorButtonEnabled">
+                <button type="button" class="btn btn-success" (click)="previousHair()" [disabled]="service.selectorButtonEnabled">
                         <i class="bi bi-caret-left"></i>
                 </button>
-                <button type="button" class="btn btn-success" [disabled]="service.selectorButtonEnabled">
+                <button type="button" class="btn btn-success" (click)="previousBody()" [disabled]="service.selectorButtonEnabled">
                         <i class="bi bi-caret-left"></i>
                 </button>
         </div>
         <div [ngClass]="(service.selectorButtonEnabled == true) ? 'avatarPreviewDisabled' : 'avatarPreview' ">
                 <div class="character" *ngIf="service.selectorButtonEnabled == false">
                         <img src="../../../../assets/templates/Head.png" style="position: absolute;">
-                        <img src="../../../../assets/templates/Bodies/Body1.png" style="position: absolute;">
-                        <img src="../../../../assets/templates/Hairs/Hair1.png" style="position: absolute;">
+                        <img [src]="getBody()" style="position: absolute;">
+                        <img [src]="getHair()" style="position: absolute;">
                 </div>
         </div>
         <div class="rightBtns">
-                <button type="button" class="btn btn-success" [disabled]="service.selectorButtonEnabled">
+                <button type="button" class="btn btn-success" (click)="nextHair()" [disabled]="service.selectorButtonEnabled">
                         <i class="bi bi-caret-right"></i>
                 </button>
-                <button type="button" class="btn btn-success" [disabled]="service.selectorButtonEnabled">
+                <button type="button" class="btn btn-success" (click)="nextBody()" [disabled]="service.selectorButtonEnabled">
                         <i class="bi bi-caret-right"></i>
                 </button>
         </div>
