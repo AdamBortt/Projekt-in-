@@ -11,14 +11,6 @@ export class CharacterSelectComponent {
 
   constructor(public service: service, public templateService: TemplatesService) {}
 
-  getHair() {
-    return this.templateService.hairs[this.service.currentHairIndex]
-  }
-
-  getBody() {
-    return this.templateService.bodies[this.service.currentBodyIndex]
-  }
-
   nextHair() {
       this.service.currentHairIndex++;
       if (this.service.currentHairIndex >= this.templateService.hairs.length) {

@@ -1,10 +1,14 @@
 <div #screen class="avatar" id="avatar" >
-  <img *ngIf="this.service.imageUrl" width="100px" height="140px" src="{{this.service.imageUrl}}">
-  <h1 *ngIf="this.service.firstNameLetter || this.service.firstLastNameLetter" id="initials">{{ this.service.firstNameLetter }}{{ this.service.firstLastNameLetter }}</h1>
+  <div class="currentCharacter" *ngIf="service.selectorButtonEnabled == false">
+    <img src="../../../../assets/templates/Head.png" style="position: absolute">
+    <img [src]="templateService.hairs[service.currentHairIndex]" style="position: absolute;">
+    <img [src]="templateService.bodies[service.currentBodyIndex]">
+  </div>
+  <h1 *ngIf="service.firstNameLetter || service.firstLastNameLetter" id="initials">{{ service.firstNameLetter }}{{ service.firstLastNameLetter }}</h1>
 </div>
 
 <div class="button">
-<button mat-raised-button color="primary" [disabled]="this.service.downloadButtonEnabled" class="download-btn" (click)="download()">Download</button>
+<button mat-raised-button color="primary" [disabled]="service.downloadButtonEnabled" class="download-btn" (click)="download()">Download</button>
 </div>
 
 <div id="download">

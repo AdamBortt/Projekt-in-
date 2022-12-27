@@ -9,9 +9,8 @@
         </div>
         <div [ngClass]="(service.selectorButtonEnabled == true) ? 'avatarPreviewDisabled' : 'avatarPreview' ">
                 <div class="character" *ngIf="service.selectorButtonEnabled == false">
-                        <img src="../../../../assets/templates/Head.png" style="position: absolute;">
-                        <img [src]="getBody()" style="position: absolute;">
-                        <img [src]="getHair()" style="position: absolute;">
+                        <img [src]="templateService.hairs[service.currentHairIndex]" style="position: absolute;">
+                        <img [src]="templateService.bodies[service.currentBodyIndex]" style="position: absolute; top: 10px">
                 </div>
         </div>
         <div class="rightBtns">

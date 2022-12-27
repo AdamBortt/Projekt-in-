@@ -1,7 +1,7 @@
 .avatar {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     border: 1px solid black;
     border-radius: 100%;
     width: 100%;
@@ -11,10 +11,8 @@
     margin-top: 20px;
 }
 h1 {
-    font-size: 75px;
-}
-img {
-justify-self: center;
+    font-size: 100px;
+    color: rgb(0, 0, 0)
 }
 #download {
     display: none;

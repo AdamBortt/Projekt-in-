@@ -1,5 +1,6 @@
 import { Component, OnInit,  ViewChild, ElementRef } from '@angular/core';
 import { service } from '../../../services/service';
+import { TemplatesService } from 'src/app/services/templates-service.service';
 import html2canvas from 'html2canvas';
 
 @Component({
@@ -13,7 +14,7 @@ export class AvatarComponent implements OnInit {
   @ViewChild('canvas') canvas: ElementRef;
   @ViewChild('downloadLink') downloadLink: ElementRef;
 
-  constructor(public service: service) { }
+  constructor(public service: service, public templateService: TemplatesService) { }
 
   ngOnInit(): void {
   }
