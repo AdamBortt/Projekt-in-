@@ -16,5 +16,6 @@ export class service {
     this.imageUrl=""
     this.firstNameLetter=""
     this.firstLastNameLetter=""
+    this.selectorButtonEnabled = true
   }
 }
