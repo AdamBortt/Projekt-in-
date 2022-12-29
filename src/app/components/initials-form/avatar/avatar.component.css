@@ -1,7 +1,8 @@
 .avatar {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40px;
     border: 1px solid black;
     border-radius: 100%;
     width: 100%;
