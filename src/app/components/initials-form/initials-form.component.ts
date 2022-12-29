@@ -29,6 +29,17 @@ export class InitialsFormComponent implements OnInit{
     console.log("size value is now" + this.service.imgSize)
   }
 
+  sizeAdjust() {
+    if (this.service.selectorButtonEnabled == true)
+    {
+      this.service.initialsSize = 150;
+    }
+    else 
+    {
+      this.service.initialsSize = 225 - this.service.imgSize;
+    }
+  }
+
   nameChange(event: any) {
     this.service.firstNameLetter = event.target.value.charAt(0).toUpperCase();
     console.log('name is: ', this.service.firstNameLetter);
