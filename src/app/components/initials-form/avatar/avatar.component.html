@@ -1,10 +1,10 @@
 <div #screen class="avatar" id="avatar" >
   <div class="currentCharacter" *ngIf="service.selectorButtonEnabled == false">
-    <img src="../../../../assets/templates/Head.svg" style="position: absolute">
-    <img [src]="templateService.hairs[service.currentHairIndex]" style="position: absolute;">
-    <img [src]="templateService.bodies[service.currentBodyIndex]">
+    <img src="../../../../assets/templates/Head.svg" style="position: absolute" height="auto" width={{service.imgSize}}>
+    <img [src]="templateService.hairs[service.currentHairIndex]" style="position: absolute;" height="auto" width={{service.imgSize}}>
+    <img [src]="templateService.bodies[service.currentBodyIndex]" height="auto" width={{service.imgSize}}>
   </div>
-  <h1 *ngIf="service.firstNameLetter || service.firstLastNameLetter" id="initials">{{ service.firstNameLetter }}{{ service.firstLastNameLetter }}</h1>
+    <h1 *ngIf="service.firstNameLetter || service.firstLastNameLetter" id="initials" [style.font-size.px]=service.initialsSize>{{ service.firstNameLetter }}{{ service.firstLastNameLetter }}</h1>
 </div>
 
 <div class="button">

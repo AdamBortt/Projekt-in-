@@ -5,8 +5,8 @@ export class service {
   firstNameLetter: string = "";
   firstLastNameLetter: string = "";
   selectedIcon: string = "";
-  size: number = 100;
-
+  imgSize: number = 175;
+  initialsSize: number = 225-this.imgSize;
   imageUrl: string;
 
   currentBodyIndex: number = 0;
