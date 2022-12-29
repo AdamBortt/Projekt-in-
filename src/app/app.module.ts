@@ -25,7 +25,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { service } from './services/service';
 import { TemplatesService } from './services/templates-service.service';
 import { MenuComponent } from './components/menu/menu.component';
-import { AvatarsFormComponent } from './components/avatars-form/avatars-form.component';
 import { CustomFormComponent } from './components/custom-form/custom-form.component';
 import { CharacterSelectComponent } from './components/initials-form/character-select/character-select.component';
 
@@ -35,7 +34,6 @@ import { CharacterSelectComponent } from './components/initials-form/character-s
     InitialsFormComponent,
     AvatarComponent,
     MenuComponent,
-    AvatarsFormComponent,
     CustomFormComponent,
     CharacterSelectComponent,
   ],
