@@ -59,7 +59,7 @@ export class InitialsFormComponent implements OnInit{
    console.log("backLightness: " + this.backLightness)
    console.log("fontLightness: " + this.fontLightness)
    var diff = this.backLightness - this.fontLightness;
-   if ( diff >= -0.5 && diff <= 0.5 ) {
+   if ( diff >= -0.15 && diff <= 0.15 ) {
      console.log("font ledwo widoczny!")
      this.warning = true;
    }
