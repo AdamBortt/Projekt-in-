@@ -1,5 +1,5 @@
 import { Component, OnInit,  ViewChild, ElementRef } from '@angular/core';
-import { service } from '../../../services/service';
+import { service } from '../../services/service';
 import { TemplatesService } from 'src/app/services/templates-service.service';
 import html2canvas from 'html2canvas';
 
