@@ -17,6 +17,7 @@ export class CustomFormComponent {
       this.service.imageUrl = e.target.result;
     };
     reader.readAsDataURL(file);
+    this.service.initialsSize = 225 - this.service.imgSize
   }
 
 }
