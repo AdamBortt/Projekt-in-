@@ -4,7 +4,6 @@ export class service {
   
   firstNameLetter: string = "";
   firstLastNameLetter: string = "";
-  selectedIcon: string = "";
 
   backLightness: number = 1;
   fontLightness: number = 0;
