@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { InitialsFormComponent } from './components/initials-form/initials-form.component';
+import { TemplateFormComponent } from './components/template-form/template-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -26,12 +26,12 @@ import { service } from './services/service';
 import { TemplatesService } from './services/templates-service.service';
 import { MenuComponent } from './components/menu/menu.component';
 import { CustomFormComponent } from './components/custom-form/custom-form.component';
-import { CharacterSelectComponent } from './components/initials-form/character-select/character-select.component';
+import { CharacterSelectComponent } from './components/template-form/character-select/character-select.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InitialsFormComponent,
+    TemplateFormComponent,
     AvatarComponent,
     MenuComponent,
     CustomFormComponent,
