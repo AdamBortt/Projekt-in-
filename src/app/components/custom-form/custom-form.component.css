@@ -41,6 +41,11 @@ p {
 .file-input {
     display: none;
 }
+.fontColorPicker {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
   app-avatar {
     width: 33.3%;
     margin-left: 200px;

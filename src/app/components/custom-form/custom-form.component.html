@@ -8,6 +8,11 @@
             <p>Color:</p>
             <input matInput type="color" class="color-input" id="font-color" (input)="service.colorChange($event)" value="#ffffff">
         </div>
+        <div class="fontColorPicker">
+            <span matTooltip="the color may be difficult to read for the selected background color" *ngIf="service.warning" class="material-icons red-color">warning </span>
+            <p>Font color:</p>
+            <input matInput type="color" class="color-input" id="font-color" (input)="service.fontColorChange($event)" value="#000000">
+        </div>
         <mat-checkbox class="shape-check" (change)="service.squareChange($event.checked)">Square</mat-checkbox>
         <input type="file" (change)="onFileChange($event)"/>
         <img *ngIf="service.imageUrl" [src]="service.imageUrl" class="image">
