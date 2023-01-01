@@ -27,6 +27,7 @@ import { TemplatesService } from './services/templates-service.service';
 import { MenuComponent } from './components/menu/menu.component';
 import { CustomFormComponent } from './components/custom-form/custom-form.component';
 import { CharacterSelectComponent } from './components/template-form/character-select/character-select.component';
+import { InitialsComponent } from './components/initials/initials.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CharacterSelectComponent } from './components/template-form/character-s
     MenuComponent,
     CustomFormComponent,
     CharacterSelectComponent,
+    InitialsComponent,
   ],
   imports: [
     BrowserModule,

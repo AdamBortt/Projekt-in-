@@ -25,19 +25,6 @@ export class service {
     this.firstLastNameLetter=""
     this.selectorButtonEnabled = true
   }
-
-  nameChange(event: any) {
-    this.firstNameLetter = event.target.value.charAt(0).toUpperCase();
-    console.log('name is: ', this.firstNameLetter);
-    this.checkValue();
-  }
-
-  lastNameChange(event: any) {
-    this.firstLastNameLetter = event.target.value.charAt(0).toUpperCase();
-    console.log('name is: ', this.firstLastNameLetter);
-    this.checkValue();
-  }
-
   checkValue() {
     if (this.firstNameLetter == "" && this.firstLastNameLetter == "")
     this.downloadButtonEnabled = true;

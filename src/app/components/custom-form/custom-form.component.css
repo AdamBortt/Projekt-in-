@@ -6,45 +6,9 @@
     min-width: 1100px;
     margin: 0;
 }
-.form-group {
+.form {
     display: flex;
     flex-direction: column;
-    padding-right: 5px;
-    gap: 5px;
-}
-.colorPicker {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-.color-input {
-    width: 80px;
-}
-p { 
-    font-size: 15px;
-    margin-top: 3px;
-    margin-right: 5px;
-}
-.image {
-    max-width: 200px;
-    max-height: 200px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: 10px 10px 15px  rgba(0, 0, 0, 0.2);
-}
-.shape-check {
-    display: flex;
-    justify-content: flex-end;
-}
-.file-input {
-    display: none;
-}
-.fontColorPicker {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
 }
   app-avatar {
     width: 33.3%;

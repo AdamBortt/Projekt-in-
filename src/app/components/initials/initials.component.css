@@ -1,0 +1,33 @@
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-right: 5px;
+}
+.colorPicker {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.fontColorPicker {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.shape-check {
+    display: flex;
+    justify-content: flex-end;
+}
+.form {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.color-input {
+    width: 80px;
+}
+p { 
+    font-size: 15px;
+    margin-top: 3px;
+    margin-right: 5px;
+}
