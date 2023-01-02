@@ -18,6 +18,7 @@ export class CustomFormComponent {
     };
     reader.readAsDataURL(file);
     this.service.initialsSize = 225 - this.service.imgSize
+    this.service.downloadButtonEnabled = false
   }
 
 }

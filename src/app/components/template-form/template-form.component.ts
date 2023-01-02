@@ -26,10 +26,12 @@ export class TemplateFormComponent implements OnInit{
     if (this.service.selectorButtonEnabled == true)
     {
       this.service.initialsSize = 150;
+      this.service.checkValue()
     }
     else 
     {
       this.service.initialsSize = 225 - this.service.imgSize;
+      this.service.downloadButtonEnabled = false
     }
   }
 }
