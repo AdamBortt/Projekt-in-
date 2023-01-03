@@ -1,17 +1,17 @@
 <div #screen class="avatar" id="avatar" >
-  <div class="customCharacter" *ngIf="service.imageUrl">
-    <img [src]="service.imageUrl" height="auto" width={{service.imgSize}}>
+  <div class="customCharacter" *ngIf="DataService.imageUrl">
+    <img [src]="DataService.imageUrl" height="auto" width={{DataService.imgSize}}>
   </div>
-  <div class="currentCharacter" *ngIf="service.selectorButtonEnabled == false">
-    <img src="../../../../assets/templates/Head.svg" style="position: absolute" height="auto" width={{service.imgSize}}>
-    <img [src]="templateService.hairs[service.currentHairIndex]" style="position: absolute;" height="auto" width={{service.imgSize}}>
-    <img [src]="templateService.bodies[service.currentBodyIndex]" height="auto" width={{service.imgSize}}>
+  <div class="currentCharacter" *ngIf="DataService.selectorButtonEnabled == false">
+    <img src="../../../../assets/templates/Head.svg" style="position: absolute" height="auto" width={{DataService.imgSize}}>
+    <img [src]="templateService.hairs[DataService.currentHairIndex]" style="position: absolute;" height="auto" width={{DataService.imgSize}}>
+    <img [src]="templateService.bodies[DataService.currentBodyIndex]" height="auto" width={{DataService.imgSize}}>
   </div>
-    <h1 *ngIf="service.firstNameLetter || service.firstLastNameLetter" id="initials" [style.font-size.px]=service.initialsSize>{{ service.firstNameLetter }}{{ service.firstLastNameLetter }}</h1>
+    <h1 *ngIf="DataService.firstNameLetter || DataService.firstLastNameLetter" id="initials" [style.font-size.px]=DataService.initialsSize>{{ DataService.firstNameLetter }}{{ DataService.firstLastNameLetter }}</h1>
 </div>
 
 <div class="button">
-<button mat-raised-button color="primary" [disabled]="service.downloadButtonEnabled" class="download-btn" (click)="download()">Download</button>
+<button mat-raised-button color="primary" [disabled]="DataService.downloadButtonEnabled" class="download-btn" (click)="download()">Download</button>
 </div>
 
 <div id="download">

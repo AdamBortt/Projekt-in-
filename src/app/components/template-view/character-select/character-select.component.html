@@ -1,23 +1,23 @@
 <div class="container" >
         <div class="leftBtns">
-                <button type="button" class="btn btn-success" (click)="previousHair()" [disabled]="service.selectorButtonEnabled">
+                <button type="button" class="btn btn-success" (click)="previousHair()" [disabled]="DataService.selectorButtonEnabled">
                         <i class="bi bi-caret-left"></i>
                 </button>
-                <button type="button" class="btn btn-success" (click)="previousBody()" [disabled]="service.selectorButtonEnabled">
+                <button type="button" class="btn btn-success" (click)="previousBody()" [disabled]="DataService.selectorButtonEnabled">
                         <i class="bi bi-caret-left"></i>
                 </button>
         </div>
-        <div [ngClass]="(service.selectorButtonEnabled == true) ? 'avatarPreviewDisabled' : 'avatarPreview' ">
-                <div class="character" *ngIf="service.selectorButtonEnabled == false">
-                        <img [src]="templateService.hairs[service.currentHairIndex]" style="position: absolute;">
-                        <img [src]="templateService.bodies[service.currentBodyIndex]" style="position: absolute; top: 10px">
+        <div [ngClass]="(DataService.selectorButtonEnabled == true) ? 'avatarPreviewDisabled' : 'avatarPreview' ">
+                <div class="character" *ngIf="DataService.selectorButtonEnabled == false">
+                        <img [src]="templateService.hairs[DataService.currentHairIndex]" style="position: absolute;">
+                        <img [src]="templateService.bodies[DataService.currentBodyIndex]" style="position: absolute; top: 10px">
                 </div>
         </div>
         <div class="rightBtns">
-                <button type="button" class="btn btn-success" (click)="nextHair()" [disabled]="service.selectorButtonEnabled">
+                <button type="button" class="btn btn-success" (click)="nextHair()" [disabled]="DataService.selectorButtonEnabled">
                         <i class="bi bi-caret-right"></i>
                 </button>
-                <button type="button" class="btn btn-success" (click)="nextBody()" [disabled]="service.selectorButtonEnabled">
+                <button type="button" class="btn btn-success" (click)="nextBody()" [disabled]="DataService.selectorButtonEnabled">
                         <i class="bi bi-caret-right"></i>
                 </button>
         </div>

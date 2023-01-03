@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { service } from '../../services/service';
+import { DataService } from '../../services/Data.service';
 
 @Component({
   selector: 'app-template-view',
@@ -8,30 +8,30 @@ import { service } from '../../services/service';
 })
 export class TemplateViewComponent implements OnInit{
 
-  constructor(public service: service) {  }
+  constructor(public DataService: DataService) {  }
 
   showCharacterSelect: boolean = false;
   
   ngOnInit(): void {
-    this.service.checkValue();
+    this.DataService.checkValue();
   }
 
   sizeChange(event: any) {
-    this.service.imgSize = event.target.value;
-    this.service.initialsSize = 225 - this.service.imgSize;
-    console.log("size value is now" + this.service.imgSize)
+    this.DataService.imgSize = event.target.value;
+    this.DataService.initialsSize = 225 - this.DataService.imgSize;
+    console.log("size value is now" + this.DataService.imgSize)
   }
 
   sizeAdjust() {
-    if (this.service.selectorButtonEnabled == true)
+    if (this.DataService.selectorButtonEnabled == true)
     {
-      this.service.initialsSize = 150;
-      this.service.checkValue()
+      this.DataService.initialsSize = 150;
+      this.DataService.checkValue()
     }
     else 
     {
-      this.service.initialsSize = 225 - this.service.imgSize;
-      this.service.downloadButtonEnabled = false
+      this.DataService.initialsSize = 225 - this.DataService.imgSize;
+      this.DataService.downloadButtonEnabled = false
     }
   }
 }

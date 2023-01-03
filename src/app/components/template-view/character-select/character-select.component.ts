@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { service } from 'src/app/services/service';
-import { TemplatesService } from 'src/app/services/templates-service.service';
+import { DataService } from 'src/app/services/Data.service';
+import { TemplatesService } from 'src/app/services/Templates.service';
 
 @Component({
   selector: 'app-character-select',
@@ -9,33 +9,33 @@ import { TemplatesService } from 'src/app/services/templates-service.service';
 })
 export class CharacterSelectComponent {
 
-  constructor(public service: service, public templateService: TemplatesService) {}
+  constructor(public DataService: DataService, public templateService: TemplatesService) {}
 
   nextHair() {
-      this.service.currentHairIndex++;
-      if (this.service.currentHairIndex >= this.templateService.hairs.length) {
-        this.service.currentHairIndex = 0;
+      this.DataService.currentHairIndex++;
+      if (this.DataService.currentHairIndex >= this.templateService.hairs.length) {
+        this.DataService.currentHairIndex = 0;
       }
   }
 
   previousHair() {
-    this.service.currentHairIndex--;
-    if (this.service.currentHairIndex <= -1) {
-      this.service.currentHairIndex = 4;
+    this.DataService.currentHairIndex--;
+    if (this.DataService.currentHairIndex <= -1) {
+      this.DataService.currentHairIndex = 4;
     }
 }
 
   nextBody() {
-    this.service.currentBodyIndex++;
-    if (this.service.currentBodyIndex >= this.templateService.bodies.length) {
-      this.service.currentBodyIndex = 0;
+    this.DataService.currentBodyIndex++;
+    if (this.DataService.currentBodyIndex >= this.templateService.bodies.length) {
+      this.DataService.currentBodyIndex = 0;
     }
   }
 
   previousBody() {
-    this.service.currentBodyIndex--;
-    if (this.service.currentBodyIndex <= -1) {
-      this.service.currentBodyIndex = 4;
+    this.DataService.currentBodyIndex--;
+    if (this.DataService.currentBodyIndex <= -1) {
+      this.DataService.currentBodyIndex = 4;
     }
 }
 

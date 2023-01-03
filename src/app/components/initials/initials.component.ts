@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { service } from '../../services/service';
+import { DataService } from '../../services/Data.service';
 
 @Component({
   selector: 'app-initials',
@@ -13,21 +13,21 @@ export class InitialsComponent implements OnInit {
   defaultBlack = '#ffffff'
   defaultWhite = '#000000'
 
-  constructor(public service: service) { }
+  constructor(public DataService: DataService) { }
 
   ngOnInit(): void {
   }
 
   nameChange(event: any) {
-    this.service.firstNameLetter = event.target.value.charAt(0).toUpperCase();
-    console.log('name is: ', this.service.firstNameLetter);
-    this.service.checkValue();
+    this.DataService.firstNameLetter = event.target.value.charAt(0).toUpperCase();
+    console.log('name is: ', this.DataService.firstNameLetter);
+    this.DataService.checkValue();
   }
 
   lastNameChange(event: any) {
-    this.service.firstLastNameLetter = event.target.value.charAt(0).toUpperCase();
-    console.log('name is: ', this.service.firstLastNameLetter);
-    this.service.checkValue();
+    this.DataService.firstLastNameLetter = event.target.value.charAt(0).toUpperCase();
+    console.log('name is: ', this.DataService.firstLastNameLetter);
+    this.DataService.checkValue();
   }
 
   clearAll(): void {
@@ -37,7 +37,7 @@ export class InitialsComponent implements OnInit {
     this.surnameValue = ''
     this.defaultBlack = '#ffffff'
     this.defaultWhite = '#000000'
-    this.service.clearPreview()
+    this.DataService.clearPreview()
   }
   
 }

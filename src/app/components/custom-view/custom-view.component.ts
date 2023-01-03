@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { service } from '../../services/service';
+import { DataService } from '../../services/Data.service';
 
 @Component({
   selector: 'app-custom-view',
@@ -8,17 +8,17 @@ import { service } from '../../services/service';
 })
 export class CustomViewComponent {
 
-  constructor(public service: service) {  }
+  constructor(public DataService: DataService) {  }
 
   onFileChange(event) {
     const file = event.target.files[0];
     const reader = new FileReader();
     reader.onload = (e: any) => {
-      this.service.imageUrl = e.target.result;
+      this.DataService.imageUrl = e.target.result;
     };
     reader.readAsDataURL(file);
-    this.service.initialsSize = 225 - this.service.imgSize
-    this.service.downloadButtonEnabled = false
+    this.DataService.initialsSize = 225 - this.DataService.imgSize
+    this.DataService.downloadButtonEnabled = false
   }
 
 }
