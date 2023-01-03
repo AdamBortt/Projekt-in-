@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { service } from '../../services/service';
 
 @Component({
-  selector: 'app-template-form',
-  templateUrl: './template-form.component.html',
-  styleUrls: ['./template-form.component.css']
+  selector: 'app-template-view',
+  templateUrl: './template-view.component.html',
+  styleUrls: ['./template-view.component.css']
 })
-export class TemplateFormComponent implements OnInit{
+export class TemplateViewComponent implements OnInit{
 
   constructor(public service: service) {  }
 

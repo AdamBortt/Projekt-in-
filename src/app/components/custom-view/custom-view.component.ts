@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { service } from '../../services/service';
 
 @Component({
-  selector: 'app-custom-form',
-  templateUrl: './custom-form.component.html',
-  styleUrls: ['./custom-form.component.css']
+  selector: 'app-custom-view',
+  templateUrl: './custom-view.component.html',
+  styleUrls: ['./custom-view.component.css']
 })
-export class CustomFormComponent {
+export class CustomViewComponent {
 
   constructor(public service: service) {  }
 

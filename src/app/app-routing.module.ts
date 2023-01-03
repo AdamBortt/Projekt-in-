@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { TemplateFormComponent } from './components/template-form/template-form.component';
-import { CustomFormComponent } from './components/custom-form/custom-form.component';
+import { TemplateViewComponent } from './components/template-view/template-view.component';
+import { CustomViewComponent } from './components/custom-view/custom-view.component';
 
 const routes: Routes = [
   {
     path: 'template',
-    component: TemplateFormComponent
+    component: TemplateViewComponent
   },
   {
     path:'custom',
-    component: CustomFormComponent
+    component: CustomViewComponent
   },
   {
     path:'**',

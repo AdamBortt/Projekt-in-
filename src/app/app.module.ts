@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TemplateFormComponent } from './components/template-form/template-form.component';
+import { TemplateViewComponent } from './components/template-view/template-view.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -25,17 +25,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { service } from './services/service';
 import { TemplatesService } from './services/templates-service.service';
 import { MenuComponent } from './components/menu/menu.component';
-import { CustomFormComponent } from './components/custom-form/custom-form.component';
-import { CharacterSelectComponent } from './components/template-form/character-select/character-select.component';
+import { CustomViewComponent } from './components/custom-view/custom-view.component';
+import { CharacterSelectComponent } from './components/template-view/character-select/character-select.component';
 import { InitialsComponent } from './components/initials/initials.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TemplateFormComponent,
+    TemplateViewComponent,
     AvatarComponent,
     MenuComponent,
-    CustomFormComponent,
+    CustomViewComponent,
     CharacterSelectComponent,
     InitialsComponent,
   ],
