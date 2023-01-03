@@ -1,3 +1,7 @@
+import { Injectable } from "@angular/core";
+@Injectable({
+  providedIn: 'root'
+})
 export class service {
   downloadButtonEnabled: boolean = true;
   selectorButtonEnabled: boolean = true;

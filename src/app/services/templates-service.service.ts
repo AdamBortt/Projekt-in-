@@ -1,3 +1,7 @@
+import { Injectable } from "@angular/core";
+@Injectable({
+  providedIn: 'root'
+})
 export class TemplatesService {
   head = '../assets/templates/Head.svg'
   

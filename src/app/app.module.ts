@@ -22,8 +22,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 
-import { service } from './services/service';
-import { TemplatesService } from './services/templates-service.service';
 import { MenuComponent } from './components/menu/menu.component';
 import { CustomViewComponent } from './components/custom-view/custom-view.component';
 import { CharacterSelectComponent } from './components/template-view/character-select/character-select.component';
@@ -61,9 +59,8 @@ import { InitialsComponent } from './components/initials/initials.component';
     ],
   exports: [MatInputModule, MatFormFieldModule],
   providers: [
-    { provide: MAT_COLOR_FORMATS, useValue: NGX_MAT_COLOR_FORMATS },
-    service,
-    TemplatesService],
+    { provide: MAT_COLOR_FORMATS, useValue: NGX_MAT_COLOR_FORMATS }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
