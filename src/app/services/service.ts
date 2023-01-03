@@ -25,6 +25,9 @@ export class service {
     this.firstLastNameLetter=""
     this.selectorButtonEnabled = true
     this.downloadButtonEnabled = true
+    this.backLightness = 1;
+    this.fontLightness = 0;
+    this.fontCalculate()
   }
   checkValue() {
     if (this.firstNameLetter == "" && this.firstLastNameLetter == "" && this.selectorButtonEnabled == true)

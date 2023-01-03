@@ -8,6 +8,10 @@ import { service } from '../../services/service';
 })
 export class InitialsComponent implements OnInit {
 
+  nameValue = ''
+  surnameValue = ''
+  defaultBlack = '#ffffff'
+  defaultWhite = '#000000'
 
   constructor(public service: service) { }
 
@@ -26,4 +30,14 @@ export class InitialsComponent implements OnInit {
     this.service.checkValue();
   }
 
+  clearAll(): void {
+    document.getElementById('avatar').style.backgroundColor = `#ffffff`
+    document.getElementById('initials').style.color = '#000000';
+    this.nameValue = ''
+    this.surnameValue = ''
+    this.defaultBlack = '#ffffff'
+    this.defaultWhite = '#000000'
+    this.service.clearPreview()
+  }
+  
 }
