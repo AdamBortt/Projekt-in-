@@ -1,5 +1,5 @@
 <div #screen class="avatar" id="avatar" >
-  <div class="customCharacter" *ngIf="DataService.imageUrl">
+  <div class="customCharacter" *ngIf="DataService.imageDisplay">
     <img [src]="DataService.imageUrl" height="auto" width={{DataService.imgSize}}>
   </div>
   <div class="currentCharacter" *ngIf="DataService.selectorButtonEnabled == false">

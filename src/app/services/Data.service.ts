@@ -19,6 +19,7 @@ export class DataService {
   imgSize: number = 175;
   initialsSize: number = 150;
   imageUrl: string;
+  imageDisplay: boolean
 
   currentBodyIndex: number = 0;
   currentHairIndex: number = 0;

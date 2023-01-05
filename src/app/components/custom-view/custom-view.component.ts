@@ -19,6 +19,7 @@ export class CustomViewComponent {
     reader.readAsDataURL(file);
     this.DataService.initialsSize = 225 - this.DataService.imgSize
     this.DataService.downloadButtonEnabled = false
+    this.DataService.imageDisplay = true
   }
 
 }
