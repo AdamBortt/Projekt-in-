@@ -16,12 +16,6 @@ export class TemplateViewComponent implements OnInit{
     this.DataService.checkValue();
   }
 
-  sizeChange(event: any) {
-    this.DataService.imgSize = event.target.value;
-    this.DataService.initialsSize = 225 - this.DataService.imgSize;
-    console.log("size value is now" + this.DataService.imgSize)
-  }
-
   sizeAdjust() {
     if (this.DataService.selectorButtonEnabled == true)
     {

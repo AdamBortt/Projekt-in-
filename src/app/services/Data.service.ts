@@ -48,6 +48,12 @@ export class DataService {
     this.fontCalculate()
   }
 
+  sizeChange(event: any) {
+    this.imgSize = event.target.value;
+    this.initialsSize = 225 - this.imgSize;
+    console.log("size value is now" + this.imgSize)
+  }
+
   fontCalculate() {
     console.log("backLightness: " + this.backLightness)
     console.log("fontLightness: " + this.fontLightness)

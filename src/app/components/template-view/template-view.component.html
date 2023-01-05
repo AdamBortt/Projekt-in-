@@ -3,7 +3,7 @@
     <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" (change)="sizeAdjust()" [(ngModel)]="DataService.selectorButtonEnabled">
     <label class="btn btn-outline-primary" for="btncheck2">Character select</label>
     <app-character-select></app-character-select>
-    <input class="form-range range" type="range" min="100" max="250" step="1" value={{DataService.imgSize}} (input)="sizeChange($event)" [disabled]="DataService.selectorButtonEnabled">
+    <input class="form-range range" type="range" min="100" max="250" step="1" value={{DataService.imgSize}} (input)="DataService.sizeChange($event)" [disabled]="DataService.selectorButtonEnabled">
 
   </div>
 
