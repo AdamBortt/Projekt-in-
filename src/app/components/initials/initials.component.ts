@@ -8,10 +8,10 @@ import { DataService } from '../../services/Data.service';
 })
 export class InitialsComponent implements OnInit {
 
-  nameValue = ''
-  surnameValue = ''
-  defaultBlack = '#ffffff'
-  defaultWhite = '#000000'
+  nameValue: string = ''
+  surnameValue: string = ''
+  defaultBlack = '#000000'
+  defaultWhite = '#ffffff'
 
   constructor(public DataService: DataService) { }
 
@@ -30,13 +30,16 @@ export class InitialsComponent implements OnInit {
     this.DataService.checkValue();
   }
 
-  clearAll(): void {
-    document.getElementById('avatar').style.backgroundColor = `#ffffff`
+  clearAll() {
+    if (document.getElementById('initials')){
     document.getElementById('initials').style.color = '#000000';
+    }
+    document.getElementById('avatar').style.backgroundColor = `#ffffff`
     this.nameValue = ''
     this.surnameValue = ''
-    this.defaultBlack = '#ffffff'
-    this.defaultWhite = '#000000'
+    this.defaultBlack = '#000000'
+    this.defaultWhite = '#ffffff'
+    this.DataService.imageDisplay = false;
     this.DataService.clearPreview()
   }
   
