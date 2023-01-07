@@ -17,6 +17,13 @@
         max-width: 450px;
     }
 }
+@media (max-width: 481px) {
+    .container {
+        border: 0px;
+        border-radius: 0px;
+        padding-right: 0px;
+    }
+}
 .menu {
     border-top: 2px solid gray;
     padding-top: 10px;
