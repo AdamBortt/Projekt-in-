@@ -9,8 +9,27 @@
 .form {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    margin-right: 6px;
 }
   app-avatar {
     width: 33.3%;
     margin-left: 200px;
+}
+.file-upload {
+    border-radius: 5px;
+    width: 130px;
+    background-color: gray;
+    cursor: pointer;
+    margin-right: 5px;
+}
+input[type="file"] {
+    display: none
+}
+p {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 15px;
 }
