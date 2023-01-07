@@ -11,6 +11,19 @@ export class CharacterSelectComponent {
 
   constructor(public DataService: DataService, public templateService: TemplatesService) {}
 
+  sizeAdjust() {
+    if (this.DataService.selectorButtonEnabled == true)
+    {
+      this.DataService.initialsSize = 150;
+      this.DataService.checkValue()
+    }
+    else 
+    {
+      this.DataService.initialsSize = 225 - this.DataService.imgSize;
+      this.DataService.downloadButtonEnabled = false
+    }
+  }
+
   nextHair() {
       this.DataService.currentHairIndex++;
       if (this.DataService.currentHairIndex >= this.templateService.hairs.length) {

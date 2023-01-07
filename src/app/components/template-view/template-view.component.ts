@@ -15,17 +15,4 @@ export class TemplateViewComponent implements OnInit{
   ngOnInit(): void {
     this.DataService.checkValue();
   }
-
-  sizeAdjust() {
-    if (this.DataService.selectorButtonEnabled == true)
-    {
-      this.DataService.initialsSize = 150;
-      this.DataService.checkValue()
-    }
-    else 
-    {
-      this.DataService.initialsSize = 225 - this.DataService.imgSize;
-      this.DataService.downloadButtonEnabled = false
-    }
-  }
 }

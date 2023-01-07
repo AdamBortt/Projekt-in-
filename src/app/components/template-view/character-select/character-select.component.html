@@ -1,25 +1,32 @@
-<div class="container" >
-        <div class="leftBtns">
-                <button type="button" class="btn btn-success" (click)="previousHair()" [disabled]="DataService.selectorButtonEnabled">
-                        <i class="bi bi-caret-left"></i>
-                </button>
-                <button type="button" class="btn btn-success" (click)="previousBody()" [disabled]="DataService.selectorButtonEnabled">
-                        <i class="bi bi-caret-left"></i>
-                </button>
+<div class="column">
+        <div class="characterSelectBtn">
+                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" (change)="sizeAdjust()" [(ngModel)]="DataService.selectorButtonEnabled">
+                <label class="btn btn-outline-primary" for="btncheck2">Character select</label>
         </div>
-        <div [ngClass]="(DataService.selectorButtonEnabled == true) ? 'avatarPreviewDisabled' : 'avatarPreview' ">
-                <div class="character" *ngIf="DataService.selectorButtonEnabled == false">
-                        <img [src]="templateService.hairs[DataService.currentHairIndex]" style="position: absolute;">
-                        <img [src]="templateService.bodies[DataService.currentBodyIndex]" style="position: absolute; top: 10px">
+        <div class="container">
+                <div class="leftBtns">
+                        <button type="button" class="btn btn-success" (click)="previousHair()" [disabled]="DataService.selectorButtonEnabled">
+                                <i class="bi bi-caret-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-success" (click)="previousBody()" [disabled]="DataService.selectorButtonEnabled">
+                                <i class="bi bi-caret-left"></i>
+                        </button>
+                </div>
+                <div [ngClass]="(DataService.selectorButtonEnabled == true) ? 'avatarPreviewDisabled' : 'avatarPreview' ">
+                        <div class="character" *ngIf="DataService.selectorButtonEnabled == false">
+                                <img [src]="templateService.hairs[DataService.currentHairIndex]" style="position: absolute;">
+                                <img [src]="templateService.bodies[DataService.currentBodyIndex]" style="position: absolute; top: 10px">
+                        </div>
+                </div>
+                <div class="rightBtns">
+                        <button type="button" class="btn btn-success" (click)="nextHair()" [disabled]="DataService.selectorButtonEnabled">
+                                <i class="bi bi-caret-right"></i>
+                        </button>
+                        <button type="button" class="btn btn-success" (click)="nextBody()" [disabled]="DataService.selectorButtonEnabled">
+                                <i class="bi bi-caret-right"></i>
+                        </button>
                 </div>
         </div>
-        <div class="rightBtns">
-                <button type="button" class="btn btn-success" (click)="nextHair()" [disabled]="DataService.selectorButtonEnabled">
-                        <i class="bi bi-caret-right"></i>
-                </button>
-                <button type="button" class="btn btn-success" (click)="nextBody()" [disabled]="DataService.selectorButtonEnabled">
-                        <i class="bi bi-caret-right"></i>
-                </button>
-        </div>
 </div>
+
 

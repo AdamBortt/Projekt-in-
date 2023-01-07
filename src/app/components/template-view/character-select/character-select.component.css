@@ -1,3 +1,8 @@
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .leftBtns {
     width: 15%;
     display: flex;
