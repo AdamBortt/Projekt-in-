@@ -48,10 +48,19 @@ export class DataService {
     this.fontCalculate()
   }
 
-  sizeChange(event: any) {
-    this.imgSize = event.target.value;
-    this.initialsSize = 225 - this.imgSize;
-    console.log("size value is now" + this.imgSize)
+  fontColorChange(event: any) {
+    this.hexToRgb(event.target.value)
+    this.fontLightness = ((this.r * 0.2126) + (this.g * 0.7152) + (this.b * 0.0722)) / 255;
+    this.fontCalculate();
+    document.getElementById('initials').style.color = event.target.value;
+  }
+  
+  hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    this.r = parseInt(result[1], 16)
+    this.g = parseInt(result[2], 16)
+    this.b = parseInt(result[3], 16)
+    console.log(this.r, this.g, this.b);
   }
 
   fontCalculate() {
@@ -67,20 +76,11 @@ export class DataService {
       this.warning = false;
     }
    }
-   
-   hexToRgb(hex) {
-     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-     this.r = parseInt(result[1], 16)
-     this.g = parseInt(result[2], 16)
-     this.b = parseInt(result[3], 16)
-     console.log(this.r, this.g, this.b);
-   }
 
-   fontColorChange(event: any) {
-    this.hexToRgb(event.target.value)
-    this.fontLightness = ((this.r * 0.2126) + (this.g * 0.7152) + (this.b * 0.0722)) / 255;
-    this.fontCalculate();
-    document.getElementById('initials').style.color = event.target.value;
+  sizeChange(event: any) {
+    this.imgSize = event.target.value;
+    this.initialsSize = 225 - this.imgSize;
+    console.log("size value is now" + this.imgSize)
   }
 
   squareChange(event: boolean) {
