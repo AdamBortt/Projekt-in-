@@ -37,7 +37,7 @@
 .file-upload {
     border-radius: 5px;
     width: 130px;
-    background-color: gray;
+    background-color: rgb(107, 0, 184);
     cursor: pointer;
     margin-right: 5px;
 }
