@@ -3,7 +3,7 @@
     <div class="form">
         <app-initials></app-initials>
         <label class="file-upload">
-        <input type="file" id="uploader" name="uploader" (change)="onFileChange($event)" accept="image/png, image/jpeg, image/jpg, image/svg" >
+        <input type="file" id="uploader" name="uploader" (change)="onFileChange($event)" accept="image/png, image/jpeg, image/jpg, image/svg, image/webp" >
         <p><i class="bi bi-box-arrow-in-down"></i> Upload image</p>
         </label>
         <input class="form-range range" type="range" min="100" max="200" step="1" value={{DataService.imgSize}} (input)="DataService.sizeChange($event)" [disabled]="!DataService.imageUrl">
