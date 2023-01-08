@@ -19,7 +19,7 @@ export class DataService {
   b: number;
   warning: boolean = false;
 
-  imgSize: number = 175;
+  imgSize: number = 150;
   initialsSize: number = 150;
   imageUrl: string;
   imageDisplay: boolean
@@ -35,6 +35,7 @@ export class DataService {
     this.downloadButtonEnabled = true
     this.backLight = 1;
     this.fontLight = 0;
+    this.imgSize = 150;
     this.LightCompare()
   }
   checkValue() {

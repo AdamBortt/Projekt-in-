@@ -16,6 +16,10 @@
     justify-content: center; 
     top: 10px;
 }
+.range {
+    width: 80%;
+    margin-top: 20px;
+}
 .imageDisabled {
     visibility: hidden;
 }

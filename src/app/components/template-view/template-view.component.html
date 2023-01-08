@@ -1,10 +1,7 @@
 <div class="initials">
   <div class="templatePicker">
     <app-character-select></app-character-select>
-    <input class="form-range range" type="range" min="100" max="250" step="1" value={{DataService.imgSize}} (input)="DataService.sizeChange($event)" [disabled]="DataService.selectorButtonEnabled">
-
   </div>
-
   <app-avatar></app-avatar>
   <app-initials></app-initials>
 </div>
