@@ -3,7 +3,7 @@
     <input type="text" class="form-control" placeholder="Surname" maxlength="20" (input)="lastNameChange($event)" [(ngModel)]="surnameValue">
     <div class="colorPicker">
       <p>Color:</p>
-        <input matInput type="color" class="color-input" id="font-color" (input)="DataService.colorChange($event)" [(ngModel)]="defaultWhite">
+        <input matInput type="color" class="color-input" id="font-color" (input)="DataService.backgroundColorChange($event)" [(ngModel)]="defaultWhite">
     </div>
     <div class="fontColorPicker">
       <span matTooltip="the color may be difficult to read for the selected background color" *ngIf="DataService.warning" class="material-icons red-color">warning </span>

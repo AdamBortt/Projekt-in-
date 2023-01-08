@@ -9,8 +9,8 @@ export class DataService {
   firstNameLetter: string = "";
   firstLastNameLetter: string = "";
 
-  backLightness: number = 1;
-  fontLightness: number = 0;
+  backLight: number = 1;
+  fontLight: number = 0;
   r: number;
   g: number;
   b: number;
@@ -30,9 +30,9 @@ export class DataService {
     this.firstLastNameLetter=""
     this.selectorButtonEnabled = true
     this.downloadButtonEnabled = true
-    this.backLightness = 1;
-    this.fontLightness = 0;
-    this.fontCalculate()
+    this.backLight = 1;
+    this.fontLight = 0;
+    this.LightCompare()
   }
   checkValue() {
     if (this.firstNameLetter == "" && this.firstLastNameLetter == "" && this.selectorButtonEnabled == true)
@@ -41,32 +41,29 @@ export class DataService {
     this.downloadButtonEnabled = false;
   }
 
-  colorChange(event: any) {
+  backgroundColorChange(event: any) {
     this.hexToRgb(event.target.value);
     document.getElementById('avatar').style.backgroundColor = `rgb(${this.r}, ${this.g}, ${this.b})`;
-    this.backLightness = ((this.r * 0.2126) + (this.g * 0.7152) + (this.b * 0.0722)) / 255;
-    this.fontCalculate()
+    this.backLight = ((this.r * 0.2126) + (this.g * 0.7152) + (this.b * 0.0722)) / 255;
+    this.LightCompare()
   }
 
   fontColorChange(event: any) {
     this.hexToRgb(event.target.value)
-    this.fontLightness = ((this.r * 0.2126) + (this.g * 0.7152) + (this.b * 0.0722)) / 255;
-    this.fontCalculate();
+    this.fontLight = ((this.r * 0.2126) + (this.g * 0.7152) + (this.b * 0.0722)) / 255;
+    this.LightCompare();
     document.getElementById('initials').style.color = event.target.value;
   }
   
-  hexToRgb(hex) {
+  hexToRgb(hex: string) {
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     this.r = parseInt(result[1], 16)
     this.g = parseInt(result[2], 16)
     this.b = parseInt(result[3], 16)
-    console.log(this.r, this.g, this.b);
   }
 
-  fontCalculate() {
-    console.log("backLightness: " + this.backLightness)
-    console.log("fontLightness: " + this.fontLightness)
-    var diff = this.backLightness - this.fontLightness;
+  LightCompare() {
+    var diff = this.backLight - this.fontLight;
     if ( diff >= -0.15 && diff <= 0.15 ) {
       console.log("font ledwo widoczny!")
       this.warning = true;
