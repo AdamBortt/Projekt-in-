@@ -9,6 +9,9 @@ export class DataService {
   firstNameLetter: string = "";
   firstLastNameLetter: string = "";
 
+  defaultBlack: string = '#000000';
+  defaultWhite: string = '#ffffff';
+
   backLight: number = 1;
   fontLight: number = 0;
   r: number;
@@ -50,9 +53,9 @@ export class DataService {
 
   fontColorChange(event: any) {
     this.hexToRgb(event.target.value)
+    this.defaultBlack = event.target.value;
     this.fontLight = ((this.r * 0.2126) + (this.g * 0.7152) + (this.b * 0.0722)) / 255;
     this.LightCompare();
-    document.getElementById('initials').style.color = event.target.value;
   }
   
   hexToRgb(hex: string) {

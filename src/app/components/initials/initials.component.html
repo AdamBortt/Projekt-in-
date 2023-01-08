@@ -3,12 +3,12 @@
     <input type="text" class="form-control" placeholder="Surname" maxlength="20" (input)="lastNameChange($event)" [(ngModel)]="surnameValue">
     <div class="colorPicker">
       <p>Color:</p>
-        <input matInput type="color" class="color-input" id="font-color" (input)="DataService.backgroundColorChange($event)" [(ngModel)]="defaultWhite">
+        <input matInput type="color" class="color-input" id="font-color" (input)="DataService.backgroundColorChange($event)" [(ngModel)]="DataService.defaultWhite">
     </div>
     <div class="fontColorPicker">
       <span matTooltip="the color may be difficult to read for the selected background color" *ngIf="DataService.warning" class="material-icons red-color">warning </span>
       <p>Font color:</p>
-      <input matInput type="color" class="color-input" id="font-color" (input)="DataService.fontColorChange($event)" [(ngModel)]="defaultBlack">
+      <input matInput type="color" class="color-input" id="font-color" (input)="DataService.fontColorChange($event)" [(ngModel)]="DataService.defaultBlack">
     </div>
     <mat-checkbox class="shape-check" (change)="DataService.squareChange($event.checked)">Square</mat-checkbox>
     <button type="button" class="btn btn-danger clear" (click)="clearAll()">Clear preview <i class="bi bi-x-lg"></i></button>

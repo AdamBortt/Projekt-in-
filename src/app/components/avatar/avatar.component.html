@@ -7,7 +7,7 @@
     <img [src]="templateService.hairs[DataService.currentHairIndex]" style="position: absolute;" height="auto" width={{DataService.imgSize}}>
     <img [src]="templateService.bodies[DataService.currentBodyIndex]" height="auto" width={{DataService.imgSize}}>
   </div>
-    <h1 *ngIf="DataService.firstNameLetter || DataService.firstLastNameLetter" id="initials" [style.font-size.px]=DataService.initialsSize>{{ DataService.firstNameLetter }}{{ DataService.firstLastNameLetter }}</h1>
+    <h1 *ngIf="DataService.firstNameLetter || DataService.firstLastNameLetter" id="initials" [style.color]=DataService.defaultBlack [style.font-size.px]=DataService.initialsSize>{{ DataService.firstNameLetter }}{{ DataService.firstLastNameLetter }}</h1>
 </div>
 
 <div class="button">

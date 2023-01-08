@@ -10,8 +10,7 @@ export class InitialsComponent implements OnInit {
 
   nameValue: string = ''
   surnameValue: string = ''
-  defaultBlack = '#000000'
-  defaultWhite = '#ffffff'
+  
 
   constructor(public DataService: DataService) { }
 
@@ -37,8 +36,8 @@ export class InitialsComponent implements OnInit {
     document.getElementById('avatar').style.backgroundColor = `#ffffff`
     this.nameValue = ''
     this.surnameValue = ''
-    this.defaultBlack = '#000000'
-    this.defaultWhite = '#ffffff'
+    this.DataService.defaultBlack = '#000000'
+    this.DataService.defaultWhite = '#ffffff'
     this.DataService.imageDisplay = false;
     this.DataService.clearPreview()
   }
